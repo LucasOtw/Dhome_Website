@@ -50,8 +50,22 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
-        <a href="index.html" class="flex items-center">
-          <img src="assets/images/logo-dhome-securite.png" alt="Dhome Securite - Serrurier Depanneur & Securisation de l'Habitat" class="h-12 md:h-14 w-auto">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="Dhome Securite - Accueil">
+          <div class="relative w-10 h-10 flex-shrink-0">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
+              <path d="M20 2 L36 14 L32 14 L32 12 L20 4 L4 16 L4 14 Z" fill="#2563eb"/>
+              <path d="M20 10 C20 10 8 14 8 14 C8 24 12 32 20 36 C28 32 32 24 32 14 C32 14 20 10 20 10Z" fill="#4b5563" stroke="#6b7280" stroke-width="0.5"/>
+              <path d="M20 10 C20 10 8 14 8 14 C8 24 12 32 20 36 L20 10Z" fill="#374151"/>
+              <circle cx="20" cy="20" r="3" fill="white"/>
+              <path d="M18.5 22 L21.5 22 L21 27 L19 27 Z" fill="white"/>
+            </svg>
+          </div>
+          <div class="flex flex-col leading-none">
+            <span class="text-lg font-bold tracking-tight">
+              <span class="text-dhome-blue-light">Dhome</span>
+            </span>
+            <span class="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-400">Securite</span>
+          </div>
         </a>
 
         <!-- Navigation desktop -->
@@ -72,30 +86,34 @@
           06 70 17 35 79
         </a>
 
-        <!-- Bouton hamburger mobile -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10" aria-label="Ouvrir le menu" aria-expanded="false">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-300 hover:text-white" aria-label="Ouvrir le menu" aria-expanded="false">
+          <div class="flex flex-col gap-[5px] w-5">
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+          </div>
         </button>
       </div>
+    </div>
 
-      <!-- Navigation mobile -->
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
-        <nav class="flex flex-col gap-1">
-          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10">Accueil</a>
-          <a href="serrurerie.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10">Serrurerie</a>
-          <a href="securisation.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10">Securisation</a>
-          <a href="multi-services.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10">Multi-services</a>
-          <a href="a-propos.html" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-white/10">A propos</a>
-          <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10">Contact</a>
-        </nav>
-        <a href="tel:+33670173579" class="mt-3 flex items-center justify-center gap-2 bg-dhome-blue text-white px-4 py-3 rounded-lg text-sm font-semibold">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div id="mobile-menu" class="mobile-menu-overlay hidden md:hidden">
+      <nav class="flex flex-col gap-1">
+        <a href="index.html" class="text-white/70 text-2xl font-bold py-3 border-b border-white/10 hover:text-dhome-blue-light transition-colors">Accueil</a>
+        <a href="serrurerie.html" class="text-white/70 text-2xl font-bold py-3 border-b border-white/10 hover:text-dhome-blue-light transition-colors">Serrurerie</a>
+        <a href="securisation.html" class="text-white/70 text-2xl font-bold py-3 border-b border-white/10 hover:text-dhome-blue-light transition-colors">Securisation</a>
+        <a href="multi-services.html" class="text-white/70 text-2xl font-bold py-3 border-b border-white/10 hover:text-dhome-blue-light transition-colors">Multi-services</a>
+        <a href="a-propos.html" class="text-white text-2xl font-bold py-3 border-b border-white/10 hover:text-dhome-blue-light transition-colors">A propos</a>
+        <a href="contact.html" class="text-white/70 text-2xl font-bold py-3 hover:text-dhome-blue-light transition-colors">Contact</a>
+      </nav>
+      <div class="menu-cta mt-8 space-y-3">
+        <a href="tel:+33670173579" class="flex items-center justify-center gap-3 bg-dhome-blue text-white px-6 py-4 rounded-xl text-lg font-semibold">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
           </svg>
-          Appeler maintenant
+          06 70 17 35 79
+        </a>
+        <a href="contact.html" class="flex items-center justify-center gap-2 border border-white/20 text-white px-6 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition-colors">
+          Demander un devis
         </a>
       </div>
     </div>
@@ -105,9 +123,9 @@
     <!-- Hero Section -->
     <section class="relative bg-dhome-dark text-white overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-dhome-dark via-gray-900 to-dhome-blue/20"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-24">
         <div class="max-w-3xl">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
             Dominique Danielo
           </h1>
           <p class="text-lg md:text-xl text-gray-300 max-w-2xl">
@@ -118,12 +136,12 @@
     </section>
 
     <!-- About text section -->
-    <section class="py-16 md:py-24 bg-white">
+    <section class="py-12 md:py-20 lg:py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Text -->
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-dhome-dark mb-6">Mon histoire</h2>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-dhome-dark mb-6">Mon histoire</h2>
             <div class="space-y-4 text-gray-600 leading-relaxed">
               <p>Apres 25 annees en tant qu'agriculteur, j'ai developpe un sens du travail bien fait, de la rigueur et de l'autonomie.</p>
               <p>Mon parcours m'a ensuite conduit vers la formation et l'accompagnement, puis vers le secteur immobilier, ou j'ai acquis une vision globale de l'habitat et des besoins des occupants.</p>
@@ -149,10 +167,10 @@
     </section>
 
     <!-- Timeline section -->
-    <section class="py-16 md:py-24 bg-gray-50">
+    <section class="py-12 md:py-20 lg:py-24 bg-gray-50">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 md:mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-dhome-dark mb-4">Mon parcours</h2>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-dhome-dark mb-4">Mon parcours</h2>
           <p class="text-lg text-gray-500">Un chemin riche d'experiences vers la serrurerie</p>
         </div>
         <div class="max-w-2xl mx-auto">
@@ -185,10 +203,10 @@
     </section>
 
     <!-- Values section -->
-    <section class="py-16 md:py-24 bg-white">
+    <section class="py-12 md:py-20 lg:py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 md:mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-dhome-dark mb-4">Mes valeurs</h2>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-dhome-dark mb-4">Mes valeurs</h2>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           <div class="text-center">
@@ -232,9 +250,9 @@
     </section>
 
     <!-- Diplome mention -->
-    <section class="py-16 md:py-24 bg-gray-50">
+    <section class="py-12 md:py-20 lg:py-24 bg-gray-50">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl p-8 md:p-12 border border-gray-200 shadow-sm">
+        <div class="bg-white rounded-2xl p-5 sm:p-8 md:p-12 border border-gray-200 shadow-sm">
           <div class="flex items-start gap-4">
             <div class="flex-shrink-0 w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center">
               <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -253,15 +271,15 @@
     </section>
 
     <!-- CTA Final -->
-    <section class="py-16 md:py-24 bg-dhome-blue">
+    <section class="py-12 md:py-20 lg:py-24 bg-dhome-blue">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Envie d'en savoir plus ?</h2>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Envie d'en savoir plus ?</h2>
         <p class="text-blue-100 text-lg mb-8">Contactez-moi pour echanger sur vos besoins en serrurerie et securisation.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-white text-dhome-blue px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-colors">
+          <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-white text-dhome-blue px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl text-base sm:text-lg font-semibold hover:bg-gray-100 transition-colors">
             Contactez-moi
           </a>
-          <a href="tel:+33670173579" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-xl text-lg font-semibold transition-colors">
+          <a href="tel:+33670173579" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl text-base sm:text-lg font-semibold transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
             </svg>
@@ -275,11 +293,21 @@
   <!-- Footer -->
   <footer class="bg-dhome-dark text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         <!-- Coordonnees -->
         <div>
-          <div class="mb-4">
-            <img src="assets/images/logo-dhome-securite.png" alt="Dhome Securite" class="h-12 w-auto brightness-200">
+          <div class="flex items-center gap-3 mb-4">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 flex-shrink-0">
+              <path d="M20 2 L36 14 L32 14 L32 12 L20 4 L4 16 L4 14 Z" fill="#2563eb"/>
+              <path d="M20 10 C20 10 8 14 8 14 C8 24 12 32 20 36 C28 32 32 24 32 14 C32 14 20 10 20 10Z" fill="#4b5563" stroke="#6b7280" stroke-width="0.5"/>
+              <path d="M20 10 C20 10 8 14 8 14 C8 24 12 32 20 36 L20 10Z" fill="#374151"/>
+              <circle cx="20" cy="20" r="3" fill="white"/>
+              <path d="M18.5 22 L21.5 22 L21 27 L19 27 Z" fill="white"/>
+            </svg>
+            <div class="flex flex-col leading-none">
+              <span class="text-lg font-bold text-dhome-blue-light">Dhome</span>
+              <span class="text-[10px] font-semibold tracking-[0.2em] uppercase text-gray-500">Securite</span>
+            </div>
           </div>
           <p class="text-gray-400 text-sm mb-4">Serrurier depanneur & specialiste en securisation de l'habitat</p>
           <div class="space-y-2 text-sm text-gray-400">
