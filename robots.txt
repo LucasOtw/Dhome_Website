@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: Mettre a jour avec le vrai nom de domaine
+# Sitemap: https://www.dhome-securite56.fr/sitemap.xml
